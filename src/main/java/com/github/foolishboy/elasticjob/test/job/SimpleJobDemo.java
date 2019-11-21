@@ -4,7 +4,6 @@ import com.dangdang.ddframe.job.api.ShardingContext;
 import com.dangdang.ddframe.job.api.simple.SimpleJob;
 import com.github.foolishboy.elasticjob.annotation.ElasticJobScheduled;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
 
 /**
  * test
@@ -13,8 +12,7 @@ import org.springframework.stereotype.Component;
  * @date 2019-11-20 15:47
  */
 @Slf4j
-@Component
-@ElasticJobScheduled(jobName = "${simple.job.demo.job.jobName}", corn = "${simple.job.demo.job.cron}", shardingTotalCount = "${simple.job.demo.job.shardingTotalCount}")
+@ElasticJobScheduled(jobName = "${simple.job.demo.job.jobName}", cron = "${simple.job.demo.job.cron}", shardingTotalCount = "${simple.job.demo.job.shardingTotalCount}")
 public class SimpleJobDemo implements SimpleJob {
 
     @Override

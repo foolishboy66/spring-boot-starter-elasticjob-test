@@ -14,7 +14,7 @@ simple:
       job:
         # 作业名称
         jobName: SimpleJobDemoTest
-        # 任务执行的corn表达式
+        # 任务执行的cron表达式
         cron: 0/5 * * * * ?
         # 任务分片总数
         shardingTotalCount: 1
